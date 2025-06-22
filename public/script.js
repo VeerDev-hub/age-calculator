@@ -171,3 +171,25 @@ downloadBtn.addEventListener("click", () => {
 
   doc.save(`age-summary-${name}.pdf`);
 });
+
+tsParticles.load("tsparticles", {
+  fullScreen: { enable: false },
+  particles: {
+    number: { value: 60 },
+    color: { value: "#0077ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.3 },
+    size: { value: { min: 1, max: 3 } },
+    move: { enable: true, speed: 1 }
+  },
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "repulse" },
+      resize: true
+    }
+  },
+  background: {
+    color: "transparent"
+  }
+});
+
