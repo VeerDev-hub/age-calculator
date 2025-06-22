@@ -2,8 +2,6 @@
 
 A modern, animated web app that calculates your age with detailed breakdowns, zodiac sign, life expectancy progress, and downloadable PDF summary — built with HTML, CSS, JavaScript, Node.js, and jsPDF.
 
-![screenshot](./public/assets/age-calculator-preview.png) <!-- Optional: Add your screenshot -->
-
 ---
 
 ## 🚀 Features
