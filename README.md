@@ -27,6 +27,10 @@ A modern, animated web app that calculates your age with detailed breakdowns, zo
 - **Templating Engine:** EJS
 
 ---
+# Live Demo 
+**(https://age-calculator-f36t.onrender.com/)**
+
+---
 
 ## 📥 Getting Started
 
