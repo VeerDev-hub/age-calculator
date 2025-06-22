@@ -24,14 +24,15 @@ h1 {
 }
 
 .container {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 600px;
-  transition: background-color 0.4s ease;
   position: relative;
+  z-index: 1;
 }
 
 #dark-toggle {
@@ -42,12 +43,13 @@ h1 {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   z-index: 10;
 }
 
 #dark-toggle:hover {
   color: #0077ff;
+  transform: scale(1.1);
 }
 
 .input-section {
@@ -64,7 +66,6 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
   background-color: white;
   color: #333;
 }
@@ -83,7 +84,6 @@ input[type="text"]::placeholder {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 #btn:hover,
@@ -140,12 +140,7 @@ body.dark {
 }
 
 body.dark .container {
-  background-color: #2a2a2a;
-}
-
-body.dark h1,
-body.dark label {
-  color: #e0e0e0;
+  background-color: rgba(42, 42, 42, 0.85);
 }
 
 body.dark input[type="text"],
@@ -153,10 +148,6 @@ body.dark input[type="date"] {
   background: #444;
   color: #fff;
   border-color: #666;
-}
-
-body.dark input[type="text"]::placeholder {
-  color: #bbb;
 }
 
 body.dark .results-section p {
@@ -167,7 +158,6 @@ body.dark .results-section p {
 body.dark #btn,
 body.dark #download-btn {
   background: #444;
-  color: #e0e0e0;
 }
 
 body.dark #btn:hover,
@@ -175,32 +165,9 @@ body.dark #download-btn:hover {
   background: #666;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .container {
-    padding: 1.5rem;
-  }
-
   .results-section {
     grid-template-columns: 1fr;
-  }
-
-  .results-section p {
-    font-size: 1rem;
-  }
-
-  #btn,
-  #download-btn {
-    width: 100%;
-    padding: 0.8rem;
-  }
-
-  #dark-toggle {
-    font-size: 1.4rem;
   }
 }
 
@@ -211,25 +178,6 @@ body.dark #download-btn:hover {
 
   .container {
     padding: 1rem;
-  }
-
-  .input-section {
-    gap: 0.75rem;
-  }
-
-  input[type="text"],
-  input[type="date"] {
-    font-size: 0.95rem;
-  }
-
-  .live-age {
-    font-size: 0.95rem;
-  }
-
-  #dark-toggle {
-    top: 0.75rem;
-    right: 0.75rem;
-    font-size: 1.3rem;
   }
 }
 
@@ -242,4 +190,3 @@ body.dark #download-btn:hover {
   left: 0;
   pointer-events: none;
 }
-
