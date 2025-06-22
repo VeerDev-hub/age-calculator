@@ -175,12 +175,12 @@ downloadBtn.addEventListener("click", () => {
 tsParticles.load("tsparticles", {
   fullScreen: { enable: false },
   particles: {
-    number: { value: 60 },
+    number: { value: 80 },
     color: { value: "#0077ff" },
     shape: { type: "circle" },
     opacity: { value: 0.3 },
-    size: { value: { min: 1, max: 3 } },
-    move: { enable: true, speed: 1 }
+    size: { value: { min: 1, max: 4 } },
+    move: { enable: true, speed: 1, direction: "none", outModes: "bounce" }
   },
   interactivity: {
     events: {
@@ -192,4 +192,3 @@ tsParticles.load("tsparticles", {
     color: "transparent"
   }
 });
-
