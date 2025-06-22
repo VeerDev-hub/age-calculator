@@ -65,6 +65,8 @@ input[type="date"] {
   border-radius: 6px;
   width: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  color: #333;
 }
 
 input[type="text"]::placeholder {
@@ -173,18 +175,18 @@ body.dark #download-btn:hover {
   background: #666;
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 1.5rem;
-  }
-
+/* Mobile responsiveness */
+@media (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
 
-  input[type="text"],
-  input[type="date"] {
-    font-size: 0.95rem;
+  .container {
+    padding: 1.5rem;
+  }
+
+  .results-section {
+    grid-template-columns: 1fr;
   }
 
   .results-section p {
@@ -194,11 +196,39 @@ body.dark #download-btn:hover {
   #btn,
   #download-btn {
     width: 100%;
+    padding: 0.8rem;
   }
 
   #dark-toggle {
-    top: 0.5rem;
-    right: 0.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .input-section {
+    gap: 0.75rem;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    font-size: 0.95rem;
+  }
+
+  .live-age {
+    font-size: 0.95rem;
+  }
+
+  #dark-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
     font-size: 1.3rem;
   }
 }
